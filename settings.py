@@ -60,9 +60,15 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-    #'scrapy_crawlera.CrawleraMiddleware': 600
-#}
+DOWNLOADER_MIDDLEWARES = {
+
+    # 'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110,
+
+    # 'partent.middlewares.ProxyMiddleware': 100,
+
+'scrapy_crawlera.CrawleraMiddleware': 600
+
+}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -100,4 +106,8 @@ MONGO_DATABASE = 'zhihu'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+CRAWLERA_ENABLED = True
 
+CRAWLERA_USER = 'dec1fc48c832470295815091f51859ef'
+
+CRAWLERA_PASS = ''
